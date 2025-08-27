@@ -107,6 +107,26 @@ const Header = () => {
                   {item.name}
                 </button>
               ))}
+
+              {/* Mobile auth buttons */}
+              <div className="border-t border-gray-200 pt-3 mt-3 space-y-2">
+                <Link
+                  to="/login"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block w-full text-left px-3 py-2 text-gray-700 hover:text-brand-800 hover:bg-gray-50 transition-colors duration-200 font-medium rounded-md"
+                >
+                  Sign In
+                </Link>
+                <Link
+                  to="/signup"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block w-full px-3 py-2"
+                >
+                  <Button className="w-full bg-brand-gradient text-white rounded-full font-semibold hover:opacity-90 transition-opacity">
+                    Get Started
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         )}
