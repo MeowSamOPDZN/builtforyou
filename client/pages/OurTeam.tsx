@@ -7,16 +7,16 @@ const OurTeam = () => {
   const team = [
     {
       id: 1,
-      name: "Alex Johnson",
-      role: "Founder & CEO",
+      name: "Sam Spyder",
+      role: "Owner & Founder",
       bio: "Full-stack developer with 8+ years experience. Passionate about building scalable solutions and leading high-performing teams.",
-      image: "/placeholder.svg",
-      skills: ["Leadership", "Full-Stack Development", "Product Strategy"],
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe235f98268d04b1f97d8e725ccc682c6%2F21f4656d6e414e8a86576910915a3b73?format=webp&width=800",
+      skills: ["Full Stack Developer", "UI/UX Design", "Game Developer"],
       social: {
-        linkedin: "#",
-        twitter: "#",
-        github: "#",
-        email: "alex@builtforyou.com"
+        linkedin: "coming-soon",
+        twitter: "https://x.com/MeowSamOPDesign",
+        github: "https://github.com/MeowSamOPDZN/",
+        email: "/sam-spyder-mail"
       }
     },
     {
