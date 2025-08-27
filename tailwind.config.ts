@@ -99,6 +99,10 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundImage: {
+        "brand-gradient": "linear-gradient(135deg, #6C63FF 0%, #9B51E0 100%)",
+        "hero-gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
