@@ -11,6 +11,7 @@ import Signup from "./pages/Signup";
 import ForgotPassword from "./pages/ForgotPassword";
 import AboutUs from "./pages/AboutUs";
 import OurTeam from "./pages/OurTeam";
+import SamSpyderMail from "./pages/SamSpyderMail";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import WebDevelopment from "./pages/services/WebDevelopment";
