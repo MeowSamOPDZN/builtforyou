@@ -273,6 +273,42 @@ const OurTeam = () => {
         </section>
       </main>
 
+      {/* LinkedIn Coming Soon Popup */}
+      {showLinkedInPopup && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative">
+            <button
+              onClick={() => setShowLinkedInPopup(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+            >
+              <X className="h-6 w-6" />
+            </button>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Linkedin className="h-8 w-8 text-blue-600" />
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Coming Soon!
+              </h3>
+
+              <p className="text-gray-600 mb-6">
+                Sam's LinkedIn profile is currently being set up.
+                Stay tuned for updates!
+              </p>
+
+              <button
+                onClick={() => setShowLinkedInPopup(false)}
+                className="bg-brand-gradient text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity"
+              >
+                Got it!
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <Footer />
     </div>
   );
