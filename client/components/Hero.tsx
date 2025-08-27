@@ -10,10 +10,13 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50"></div>
-      
+
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-brand-purple-start/10 rounded-full blur-3xl animate-pulse"></div>
@@ -46,7 +49,7 @@ const Hero = () => {
               Get Started
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            
+
             <Button
               onClick={() => scrollToSection("portfolio")}
               variant="outline"

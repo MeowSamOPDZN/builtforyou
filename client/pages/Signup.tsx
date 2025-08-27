@@ -13,7 +13,7 @@ const Signup = () => {
     password: "",
     confirmPassword: "",
     agreeToTerms: false,
-    subscribeNewsletter: true
+    subscribeNewsletter: true,
   });
   const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -55,13 +55,13 @@ const Signup = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
 
     setIsLoading(true);
-    
+
     // Simulate signup process
     setTimeout(() => {
       setIsLoading(false);
@@ -72,16 +72,16 @@ const Signup = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: type === "checkbox" ? checked : value
+      [name]: type === "checkbox" ? checked : value,
     }));
 
     // Clear error when user starts typing
     if (errors[name]) {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
-        [name]: ""
+        [name]: "",
       }));
     }
   };
@@ -89,7 +89,7 @@ const Signup = () => {
   const passwordStrength = () => {
     const password = formData.password;
     let strength = 0;
-    
+
     if (password.length >= 8) strength++;
     if (/[A-Z]/.test(password)) strength++;
     if (/[a-z]/.test(password)) strength++;
@@ -131,8 +131,12 @@ const Signup = () => {
               BuiltForYou
             </h1>
           </Link>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">Create your account</h2>
-          <p className="text-gray-600">Join us and start building amazing projects</p>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            Create your account
+          </h2>
+          <p className="text-gray-600">
+            Join us and start building amazing projects
+          </p>
         </div>
 
         {/* Signup Form */}
@@ -141,7 +145,10 @@ const Signup = () => {
             {/* Name Fields */}
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="firstName"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   First Name
                 </label>
                 <div className="relative">
@@ -158,11 +165,18 @@ const Signup = () => {
                     placeholder="John"
                   />
                 </div>
-                {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
+                {errors.firstName && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.firstName}
+                  </p>
+                )}
               </div>
 
               <div>
-                <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="lastName"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Last Name
                 </label>
                 <input
@@ -176,13 +190,18 @@ const Signup = () => {
                   }`}
                   placeholder="Doe"
                 />
-                {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>}
+                {errors.lastName && (
+                  <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>
+                )}
               </div>
             </div>
 
             {/* Email Input */}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Email Address
               </label>
               <div className="relative">
@@ -199,12 +218,17 @@ const Signup = () => {
                   placeholder="john@example.com"
                 />
               </div>
-              {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
+              {errors.email && (
+                <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+              )}
             </div>
 
             {/* Password Input */}
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Password
               </label>
               <div className="relative">
@@ -232,8 +256,10 @@ const Signup = () => {
                   )}
                 </button>
               </div>
-              {errors.password && <p className="text-red-500 text-xs mt-1">{errors.password}</p>}
-              
+              {errors.password && (
+                <p className="text-red-500 text-xs mt-1">{errors.password}</p>
+              )}
+
               {/* Password Strength Indicator */}
               {formData.password && (
                 <div className="mt-2">
@@ -244,7 +270,9 @@ const Signup = () => {
                         style={{ width: `${(passwordStrength() / 5) * 100}%` }}
                       />
                     </div>
-                    <span className="text-xs text-gray-600">{getStrengthText()}</span>
+                    <span className="text-xs text-gray-600">
+                      {getStrengthText()}
+                    </span>
                   </div>
                 </div>
               )}
@@ -252,7 +280,10 @@ const Signup = () => {
 
             {/* Confirm Password Input */}
             <div>
-              <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="confirmPassword"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Confirm Password
               </label>
               <div className="relative">
@@ -264,7 +295,9 @@ const Signup = () => {
                   value={formData.confirmPassword}
                   onChange={handleInputChange}
                   className={`w-full pl-10 pr-12 py-3 border rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-colors ${
-                    errors.confirmPassword ? "border-red-500" : "border-gray-300"
+                    errors.confirmPassword
+                      ? "border-red-500"
+                      : "border-gray-300"
                   }`}
                   placeholder="Confirm your password"
                 />
@@ -280,7 +313,11 @@ const Signup = () => {
                   )}
                 </button>
               </div>
-              {errors.confirmPassword && <p className="text-red-500 text-xs mt-1">{errors.confirmPassword}</p>}
+              {errors.confirmPassword && (
+                <p className="text-red-500 text-xs mt-1">
+                  {errors.confirmPassword}
+                </p>
+              )}
             </div>
 
             {/* Terms and Newsletter */}
@@ -294,18 +331,29 @@ const Signup = () => {
                   onChange={handleInputChange}
                   className="h-4 w-4 text-brand-600 focus:ring-brand-500 border-gray-300 rounded mt-1"
                 />
-                <label htmlFor="agreeToTerms" className="ml-2 text-sm text-gray-700">
+                <label
+                  htmlFor="agreeToTerms"
+                  className="ml-2 text-sm text-gray-700"
+                >
                   I agree to the{" "}
-                  <button type="button" className="text-brand-600 hover:text-brand-800 font-medium">
+                  <button
+                    type="button"
+                    className="text-brand-600 hover:text-brand-800 font-medium"
+                  >
                     Terms of Service
-                  </button>
-                  {" "}and{" "}
-                  <button type="button" className="text-brand-600 hover:text-brand-800 font-medium">
+                  </button>{" "}
+                  and{" "}
+                  <button
+                    type="button"
+                    className="text-brand-600 hover:text-brand-800 font-medium"
+                  >
                     Privacy Policy
                   </button>
                 </label>
               </div>
-              {errors.agreeToTerms && <p className="text-red-500 text-xs">{errors.agreeToTerms}</p>}
+              {errors.agreeToTerms && (
+                <p className="text-red-500 text-xs">{errors.agreeToTerms}</p>
+              )}
 
               <div className="flex items-center">
                 <input
@@ -316,7 +364,10 @@ const Signup = () => {
                   onChange={handleInputChange}
                   className="h-4 w-4 text-brand-600 focus:ring-brand-500 border-gray-300 rounded"
                 />
-                <label htmlFor="subscribeNewsletter" className="ml-2 text-sm text-gray-700">
+                <label
+                  htmlFor="subscribeNewsletter"
+                  className="ml-2 text-sm text-gray-700"
+                >
                   Subscribe to our newsletter for updates and tips
                 </label>
               </div>
@@ -347,7 +398,9 @@ const Signup = () => {
                 <div className="w-full border-t border-gray-300" />
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-white text-gray-500">Or sign up with</span>
+                <span className="px-2 bg-white text-gray-500">
+                  Or sign up with
+                </span>
               </div>
             </div>
 
@@ -382,8 +435,12 @@ const Signup = () => {
                 type="button"
                 className="flex items-center justify-center px-4 py-3 border border-gray-300 rounded-xl hover:bg-gray-50 transition-colors"
               >
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                <svg
+                  className="h-5 w-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
                 </svg>
                 <span className="ml-2 text-sm font-medium">Twitter</span>
               </button>

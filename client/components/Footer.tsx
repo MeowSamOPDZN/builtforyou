@@ -1,4 +1,13 @@
-import { Mail, Phone, MapPin, Twitter, Linkedin, Instagram, Github, ArrowUp } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Github,
+  ArrowUp,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
@@ -36,8 +45,16 @@ const Footer = () => {
 
   const socialLinks = [
     { name: "Twitter", icon: Twitter, href: "https://twitter.com/builtforyou" },
-    { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com/company/builtforyou" },
-    { name: "Instagram", icon: Instagram, href: "https://instagram.com/builtforyou" },
+    {
+      name: "LinkedIn",
+      icon: Linkedin,
+      href: "https://linkedin.com/company/builtforyou",
+    },
+    {
+      name: "Instagram",
+      icon: Instagram,
+      href: "https://instagram.com/builtforyou",
+    },
     { name: "GitHub", icon: Github, href: "https://github.com/builtforyou" },
   ];
 
@@ -53,8 +70,9 @@ const Footer = () => {
                 BuiltForYou
               </h3>
               <p className="text-gray-300 mt-4 leading-relaxed">
-                We build amazing websites and apps that help businesses thrive in the digital world. 
-                Modern, fast, and fully responsive solutions tailored to your needs.
+                We build amazing websites and apps that help businesses thrive
+                in the digital world. Modern, fast, and fully responsive
+                solutions tailored to your needs.
               </p>
             </div>
 
@@ -62,21 +80,25 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-brand-400 mr-3" />
-                <a href="mailto:hello@builtforyou.com" className="text-gray-300 hover:text-white transition-colors">
+                <a
+                  href="mailto:hello@builtforyou.com"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   hello@builtforyou.com
                 </a>
               </div>
               <div className="flex items-center">
                 <Phone className="h-5 w-5 text-brand-400 mr-3" />
-                <a href="tel:+1234567890" className="text-gray-300 hover:text-white transition-colors">
+                <a
+                  href="tel:+1234567890"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   +1 (234) 567-8900
                 </a>
               </div>
               <div className="flex items-center">
                 <MapPin className="h-5 w-5 text-brand-400 mr-3" />
-                <span className="text-gray-300">
-                  San Francisco, CA, USA
-                </span>
+                <span className="text-gray-300">San Francisco, CA, USA</span>
               </div>
             </div>
 
@@ -155,7 +177,8 @@ const Footer = () => {
             <div className="lg:flex-1">
               <h4 className="text-xl font-semibold mb-2">Stay updated</h4>
               <p className="text-gray-300">
-                Get the latest updates on web development trends and our projects.
+                Get the latest updates on web development trends and our
+                projects.
               </p>
             </div>
             <div className="mt-6 lg:mt-0 lg:flex-shrink-0">

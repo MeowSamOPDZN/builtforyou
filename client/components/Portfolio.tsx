@@ -6,63 +6,69 @@ const Portfolio = () => {
     {
       id: 1,
       title: "E-Commerce Platform",
-      description: "A modern e-commerce solution with advanced features like real-time inventory, payment processing, and analytics dashboard.",
+      description:
+        "A modern e-commerce solution with advanced features like real-time inventory, payment processing, and analytics dashboard.",
       image: "/placeholder.svg",
       tags: ["React", "Node.js", "MongoDB", "Stripe"],
       demoUrl: "#",
       githubUrl: "#",
-      category: "Web Development"
+      category: "Web Development",
     },
     {
       id: 2,
       title: "Mobile Banking App",
-      description: "Secure mobile banking application with biometric authentication, transaction tracking, and budget management features.",
+      description:
+        "Secure mobile banking application with biometric authentication, transaction tracking, and budget management features.",
       image: "/placeholder.svg",
       tags: ["React Native", "Firebase", "JWT", "Plaid API"],
       demoUrl: "#",
       githubUrl: "#",
-      category: "Mobile App"
+      category: "Mobile App",
     },
     {
       id: 3,
       title: "SaaS Dashboard",
-      description: "Comprehensive analytics dashboard for SaaS businesses with real-time metrics, user management, and reporting tools.",
+      description:
+        "Comprehensive analytics dashboard for SaaS businesses with real-time metrics, user management, and reporting tools.",
       image: "/placeholder.svg",
       tags: ["Next.js", "PostgreSQL", "Chart.js", "Tailwind"],
       demoUrl: "#",
       githubUrl: "#",
-      category: "Web Development"
+      category: "Web Development",
     },
     {
       id: 4,
       title: "Healthcare Platform",
-      description: "Patient management system with appointment scheduling, medical records, and telemedicine capabilities.",
+      description:
+        "Patient management system with appointment scheduling, medical records, and telemedicine capabilities.",
       image: "/placeholder.svg",
       tags: ["Vue.js", "Express", "MySQL", "WebRTC"],
       demoUrl: "#",
       githubUrl: "#",
-      category: "Web Development"
+      category: "Web Development",
     },
     {
       id: 5,
       title: "Social Media App",
-      description: "Instagram-like social media platform with photo sharing, stories, messaging, and social features.",
+      description:
+        "Instagram-like social media platform with photo sharing, stories, messaging, and social features.",
       image: "/placeholder.svg",
       tags: ["Flutter", "Node.js", "Socket.io", "Cloudinary"],
       demoUrl: "#",
       githubUrl: "#",
-      category: "Mobile App"
+      category: "Mobile App",
     },
     {
       id: 6,
       title: "Brand Identity System",
-      description: "Complete brand redesign for a tech startup including logo, color palette, typography, and brand guidelines.",
+      description:
+        "Complete brand redesign for a tech startup including logo, color palette, typography, and brand guidelines.",
       image: "/placeholder.svg",
       tags: ["Figma", "Adobe CC", "Brand Strategy", "Style Guide"],
       demoUrl: "#",
       githubUrl: "#",
-      category: "Design"
-    }
+      category: "Design",
+    },
   ];
 
   return (
@@ -71,10 +77,14 @@ const Portfolio = () => {
         {/* Section header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our <span className="bg-brand-gradient bg-clip-text text-transparent">Portfolio</span>
+            Our{" "}
+            <span className="bg-brand-gradient bg-clip-text text-transparent">
+              Portfolio
+            </span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Take a look at some of our recent projects and see how we've helped businesses achieve their digital goals.
+            Take a look at some of our recent projects and see how we've helped
+            businesses achieve their digital goals.
           </p>
         </div>
 
@@ -117,11 +127,11 @@ const Portfolio = () => {
                     {project.category}
                   </span>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-800 transition-colors duration-300">
                   {project.title}
                 </h3>
-                
+
                 <p className="text-gray-600 mb-4 leading-relaxed">
                   {project.description}
                 </p>
@@ -145,7 +155,8 @@ const Portfolio = () => {
         {/* Bottom CTA */}
         <div className="text-center">
           <p className="text-gray-600 mb-6">
-            Want to see more? Check out our complete portfolio or start your own project.
+            Want to see more? Check out our complete portfolio or start your own
+            project.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

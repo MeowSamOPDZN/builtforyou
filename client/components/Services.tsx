@@ -5,27 +5,31 @@ const Services = () => {
     {
       icon: Code,
       title: "Web Development",
-      description: "Custom websites and web applications built with modern technologies like React, Next.js, and Node.js.",
-      features: ["Responsive Design", "SEO Optimized", "Fast Performance"]
+      description:
+        "Custom websites and web applications built with modern technologies like React, Next.js, and Node.js.",
+      features: ["Responsive Design", "SEO Optimized", "Fast Performance"],
     },
     {
       icon: Smartphone,
       title: "App Development",
-      description: "Native and cross-platform mobile applications for iOS and Android using React Native and Flutter.",
-      features: ["Cross-Platform", "Native Performance", "App Store Ready"]
+      description:
+        "Native and cross-platform mobile applications for iOS and Android using React Native and Flutter.",
+      features: ["Cross-Platform", "Native Performance", "App Store Ready"],
     },
     {
       icon: Palette,
       title: "UI/UX Design",
-      description: "Beautiful, user-centered designs that enhance user experience and drive conversions.",
-      features: ["User Research", "Wireframing", "Prototyping"]
+      description:
+        "Beautiful, user-centered designs that enhance user experience and drive conversions.",
+      features: ["User Research", "Wireframing", "Prototyping"],
     },
     {
       icon: Megaphone,
       title: "Branding",
-      description: "Complete brand identity development including logos, color schemes, and brand guidelines.",
-      features: ["Logo Design", "Brand Strategy", "Style Guides"]
-    }
+      description:
+        "Complete brand identity development including logos, color schemes, and brand guidelines.",
+      features: ["Logo Design", "Brand Strategy", "Style Guides"],
+    },
   ];
 
   return (
@@ -34,10 +38,14 @@ const Services = () => {
         {/* Section header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our <span className="bg-brand-gradient bg-clip-text text-transparent">Services</span>
+            Our{" "}
+            <span className="bg-brand-gradient bg-clip-text text-transparent">
+              Services
+            </span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            We offer comprehensive digital solutions to help your business thrive in the digital landscape.
+            We offer comprehensive digital solutions to help your business
+            thrive in the digital landscape.
           </p>
         </div>
 
@@ -61,7 +69,7 @@ const Services = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-brand-800 transition-colors duration-300">
                   {service.title}
                 </h3>
-                
+
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {service.description}
                 </p>
@@ -69,7 +77,10 @@ const Services = () => {
                 {/* Features list */}
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-500">
+                    <li
+                      key={featureIndex}
+                      className="flex items-center text-sm text-gray-500"
+                    >
                       <div className="w-1.5 h-1.5 bg-brand-500 rounded-full mr-3"></div>
                       {feature}
                     </li>

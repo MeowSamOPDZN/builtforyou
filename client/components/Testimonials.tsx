@@ -11,9 +11,10 @@ const Testimonials = () => {
       position: "CEO, TechStart",
       company: "TechStart Inc.",
       image: "/placeholder.svg",
-      content: "BuiltForYou transformed our vision into a stunning reality. Their attention to detail and technical expertise exceeded our expectations. The team was professional, responsive, and delivered on time.",
+      content:
+        "BuiltForYou transformed our vision into a stunning reality. Their attention to detail and technical expertise exceeded our expectations. The team was professional, responsive, and delivered on time.",
       rating: 5,
-      project: "E-Commerce Platform"
+      project: "E-Commerce Platform",
     },
     {
       id: 2,
@@ -21,9 +22,10 @@ const Testimonials = () => {
       position: "Founder",
       company: "HealthFlow",
       image: "/placeholder.svg",
-      content: "Working with BuiltForYou was an absolute pleasure. They understood our complex requirements and delivered a solution that perfectly fits our needs. Highly recommended!",
+      content:
+        "Working with BuiltForYou was an absolute pleasure. They understood our complex requirements and delivered a solution that perfectly fits our needs. Highly recommended!",
       rating: 5,
-      project: "Healthcare Platform"
+      project: "Healthcare Platform",
     },
     {
       id: 3,
@@ -31,9 +33,10 @@ const Testimonials = () => {
       position: "Marketing Director",
       company: "GrowthCo",
       image: "/placeholder.svg",
-      content: "The mobile app they developed for us has been a game-changer. User engagement increased by 300% and our conversion rates are through the roof. Amazing work!",
+      content:
+        "The mobile app they developed for us has been a game-changer. User engagement increased by 300% and our conversion rates are through the roof. Amazing work!",
       rating: 5,
-      project: "Mobile Banking App"
+      project: "Mobile Banking App",
     },
     {
       id: 4,
@@ -41,10 +44,11 @@ const Testimonials = () => {
       position: "CTO",
       company: "InnovateLab",
       image: "/placeholder.svg",
-      content: "Exceptional development team with deep technical knowledge. They not only built what we asked for but also suggested improvements that made our product even better.",
+      content:
+        "Exceptional development team with deep technical knowledge. They not only built what we asked for but also suggested improvements that made our product even better.",
       rating: 5,
-      project: "SaaS Dashboard"
-    }
+      project: "SaaS Dashboard",
+    },
   ];
 
   // Auto-rotate testimonials
@@ -73,10 +77,14 @@ const Testimonials = () => {
         {/* Section header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-            What Our <span className="bg-brand-gradient bg-clip-text text-transparent">Clients Say</span>
+            What Our{" "}
+            <span className="bg-brand-gradient bg-clip-text text-transparent">
+              Clients Say
+            </span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our satisfied clients have to say about working with us.
+            Don't just take our word for it. Here's what our satisfied clients
+            have to say about working with us.
           </p>
         </div>
 
@@ -84,7 +92,7 @@ const Testimonials = () => {
         <div className="relative mb-16">
           <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 md:p-12 relative overflow-hidden">
             <Quote className="absolute top-6 left-6 h-12 w-12 text-brand-200" />
-            
+
             <div className="relative z-10">
               <div className="flex flex-col md:flex-row items-center gap-8">
                 {/* Testimonial content */}
@@ -92,11 +100,11 @@ const Testimonials = () => {
                   <div className="flex items-center mb-4">
                     {renderStars(testimonials[currentIndex].rating)}
                   </div>
-                  
+
                   <blockquote className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
                     "{testimonials[currentIndex].content}"
                   </blockquote>
-                  
+
                   <div>
                     <div className="font-bold text-gray-900 text-lg">
                       {testimonials[currentIndex].name}
