@@ -16,7 +16,7 @@ const ForgotPassword = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
-    
+
     if (!email.trim()) {
       setError("Email is required");
       return;
@@ -28,7 +28,7 @@ const ForgotPassword = () => {
     }
 
     setIsLoading(true);
-    
+
     // Simulate API call
     setTimeout(() => {
       setIsLoading(false);
@@ -39,7 +39,7 @@ const ForgotPassword = () => {
 
   const handleResend = async () => {
     setIsLoading(true);
-    
+
     // Simulate resend API call
     setTimeout(() => {
       setIsLoading(false);
@@ -64,8 +64,12 @@ const ForgotPassword = () => {
                 BuiltForYou
               </h1>
             </Link>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Check your email</h2>
-            <p className="text-gray-600">We've sent password reset instructions to your email</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">
+              Check your email
+            </h2>
+            <p className="text-gray-600">
+              We've sent password reset instructions to your email
+            </p>
           </div>
 
           {/* Success Card */}
@@ -79,18 +83,19 @@ const ForgotPassword = () => {
             <h3 className="text-xl font-bold text-gray-900 mb-4">
               Email sent successfully
             </h3>
-            
+
             <p className="text-gray-600 mb-2">
               We've sent a password reset link to:
             </p>
-            
+
             <p className="font-semibold text-gray-900 mb-6 break-all">
               {email}
             </p>
 
             <div className="space-y-4">
               <p className="text-sm text-gray-500">
-                Didn't receive the email? Check your spam folder or request a new link.
+                Didn't receive the email? Check your spam folder or request a
+                new link.
               </p>
 
               {/* Resend Button */}
@@ -163,8 +168,12 @@ const ForgotPassword = () => {
               BuiltForYou
             </h1>
           </Link>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">Reset your password</h2>
-          <p className="text-gray-600">Enter your email and we'll send you a reset link</p>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            Reset your password
+          </h2>
+          <p className="text-gray-600">
+            Enter your email and we'll send you a reset link
+          </p>
         </div>
 
         {/* Reset Form */}
@@ -172,7 +181,10 @@ const ForgotPassword = () => {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Email Input */}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Email Address
               </label>
               <div className="relative">
@@ -232,14 +244,27 @@ const ForgotPassword = () => {
           <div className="mt-8 p-4 bg-blue-50 rounded-xl border border-blue-200">
             <div className="flex items-start">
               <div className="flex-shrink-0">
-                <svg className="h-5 w-5 text-blue-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <svg
+                  className="h-5 w-5 text-blue-400 mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
                 </svg>
               </div>
               <div className="ml-3">
-                <h4 className="text-sm font-semibold text-blue-800 mb-1">Security Notice</h4>
+                <h4 className="text-sm font-semibold text-blue-800 mb-1">
+                  Security Notice
+                </h4>
                 <p className="text-sm text-blue-700">
-                  For your security, password reset links expire after 1 hour and can only be used once.
+                  For your security, password reset links expire after 1 hour
+                  and can only be used once.
                 </p>
               </div>
             </div>
