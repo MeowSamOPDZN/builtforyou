@@ -50,17 +50,34 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            {navigation.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href.replace("#", ""))}
+          <div className="hidden md:flex items-center space-x-8">
+            <nav className="flex space-x-8">
+              {navigation.map((item) => (
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.href.replace("#", ""))}
+                  className="text-gray-700 hover:text-brand-800 transition-colors duration-200 font-medium"
+                >
+                  {item.name}
+                </button>
+              ))}
+            </nav>
+
+            {/* Auth buttons */}
+            <div className="flex items-center space-x-4">
+              <Link
+                to="/login"
                 className="text-gray-700 hover:text-brand-800 transition-colors duration-200 font-medium"
               >
-                {item.name}
-              </button>
-            ))}
-          </nav>
+                Sign In
+              </Link>
+              <Link to="/signup">
+                <Button className="bg-brand-gradient text-white px-6 py-2 rounded-full font-semibold hover:opacity-90 transition-opacity">
+                  Get Started
+                </Button>
+              </Link>
+            </div>
+          </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
