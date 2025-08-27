@@ -5,6 +5,16 @@ import Footer from "@/components/Footer";
 import { Github, Linkedin, Twitter, Mail, X } from "lucide-react";
 
 const OurTeam = () => {
+  const [showLinkedInPopup, setShowLinkedInPopup] = useState(false);
+
+  const handleLinkedInClick = (linkedin: string) => {
+    if (linkedin === "coming-soon") {
+      setShowLinkedInPopup(true);
+    } else {
+      window.open(linkedin, "_blank");
+    }
+  };
+
   const team = [
     {
       id: 1,
