@@ -127,12 +127,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {navigation.company.map((item) => (
                 <li key={item.name}>
-                  <button
-                    onClick={() => scrollToSection(item.href.replace("#", ""))}
+                  <Link
+                    to={item.href}
                     className="text-gray-300 hover:text-white transition-colors duration-200"
                   >
                     {item.name}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>
