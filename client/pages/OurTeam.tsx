@@ -135,30 +135,43 @@ const OurTeam = () => {
                     />
                     <div className="absolute inset-0 bg-brand-gradient opacity-0 hover:opacity-80 transition-opacity duration-300 flex items-center justify-center">
                       <div className="flex space-x-4">
-                        <a
-                          href={member.social.linkedin}
+                        <button
+                          onClick={() => handleLinkedInClick(member.social.linkedin)}
                           className="p-3 bg-white rounded-full text-brand-800 hover:bg-gray-100 transition-colors duration-200"
                         >
                           <Linkedin className="h-5 w-5" />
-                        </a>
+                        </button>
                         <a
                           href={member.social.twitter}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="p-3 bg-white rounded-full text-brand-800 hover:bg-gray-100 transition-colors duration-200"
                         >
                           <Twitter className="h-5 w-5" />
                         </a>
                         <a
                           href={member.social.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="p-3 bg-white rounded-full text-brand-800 hover:bg-gray-100 transition-colors duration-200"
                         >
                           <Github className="h-5 w-5" />
                         </a>
-                        <a
-                          href={`mailto:${member.social.email}`}
-                          className="p-3 bg-white rounded-full text-brand-800 hover:bg-gray-100 transition-colors duration-200"
-                        >
-                          <Mail className="h-5 w-5" />
-                        </a>
+                        {member.social.email.startsWith('/') ? (
+                          <Link
+                            to={member.social.email}
+                            className="p-3 bg-white rounded-full text-brand-800 hover:bg-gray-100 transition-colors duration-200"
+                          >
+                            <Mail className="h-5 w-5" />
+                          </Link>
+                        ) : (
+                          <a
+                            href={`mailto:${member.social.email}`}
+                            className="p-3 bg-white rounded-full text-brand-800 hover:bg-gray-100 transition-colors duration-200"
+                          >
+                            <Mail className="h-5 w-5" />
+                          </a>
+                        )}
                       </div>
                     </div>
                   </div>
