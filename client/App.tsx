@@ -9,6 +9,18 @@ import Index from "./pages/Index";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ForgotPassword from "./pages/ForgotPassword";
+import AboutUs from "./pages/AboutUs";
+import OurTeam from "./pages/OurTeam";
+import Careers from "./pages/Careers";
+import Contact from "./pages/Contact";
+import WebDevelopment from "./pages/services/WebDevelopment";
+import AppDevelopment from "./pages/services/AppDevelopment";
+import UIUXDesign from "./pages/services/UIUXDesign";
+import Branding from "./pages/services/Branding";
+import Blog from "./pages/Blog";
+import CaseStudies from "./pages/CaseStudies";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
