@@ -41,6 +41,7 @@ const App = () => (
           {/* Company Pages */}
           <Route path="/about" element={<AboutUs />} />
           <Route path="/team" element={<OurTeam />} />
+          <Route path="/sam-spyder-mail" element={<SamSpyderMail />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
 
