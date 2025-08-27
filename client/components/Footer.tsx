@@ -24,22 +24,22 @@ const Footer = () => {
 
   const navigation = {
     company: [
-      { name: "About Us", href: "#about" },
-      { name: "Our Team", href: "#team" },
-      { name: "Careers", href: "#careers" },
-      { name: "Contact", href: "#contact" },
+      { name: "About Us", href: "/about" },
+      { name: "Our Team", href: "/team" },
+      { name: "Careers", href: "/careers" },
+      { name: "Contact", href: "/contact" },
     ],
     services: [
-      { name: "Web Development", href: "#services" },
-      { name: "App Development", href: "#services" },
-      { name: "UI/UX Design", href: "#services" },
-      { name: "Branding", href: "#services" },
+      { name: "Web Development", href: "/services/web-development" },
+      { name: "App Development", href: "/services/app-development" },
+      { name: "UI/UX Design", href: "/services/ui-ux-design" },
+      { name: "Branding", href: "/services/branding" },
     ],
     resources: [
-      { name: "Blog", href: "#blog" },
-      { name: "Case Studies", href: "#portfolio" },
-      { name: "Privacy Policy", href: "#privacy" },
-      { name: "Terms of Service", href: "#terms" },
+      { name: "Blog", href: "/blog" },
+      { name: "Case Studies", href: "/case-studies" },
+      { name: "Privacy Policy", href: "/privacy" },
+      { name: "Terms of Service", href: "/terms" },
     ],
   };
 
